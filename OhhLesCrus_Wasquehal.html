@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ohh !! Les Crus — Cave à Vins · Fromagerie · Charcuterie fine · Épicerie à Wasquehal</title>
+  <meta name="description" content="Ohh !! Les Crus de Wasquehal : cave à vins, fromagerie affinée, charcuterie fine et épicerie. 12 Place de la République, Wasquehal. ☎ 03 28 07 33 70 — Conseils de Gilles, votre caviste passionné."/>
+  <link rel="canonical" href="https://ohhlescrus.fr/"/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Ohh !! Les Crus — Cave à vins, fromagerie & charcuterie fine à Wasquehal">
+  <meta property="og:description" content="Lieu incontournable pour tous les amateurs de mets de qualité. Vins de terroir, fromages affinés, charcuteries d'exception. Place de la République, Wasquehal.">
+  <meta property="og:image" content="https://ohhlescrus.fr/photo-boutique.jpg">
+  <meta property="og:url" content="https://ohhlescrus.fr/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Schema.org LocalBusiness — EEAT / GEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Ohh !! Les Crus de Wasquehal",
+    "alternateName": "Ohh Les Crus",
+    "description": "Cave à vins, fromagerie affinée, charcuterie fine et épicerie de qualité au cœur de Wasquehal. Conseils personnalisés de Gilles, caviste passionné. Sélection de vins de terroir français, bières régionales, champagnes, spiritueux, fromages AOP affinés, charcuteries d'Italie, d'Espagne et de Corse.",
+    "telephone": "+33328073370",
+    "email": "ohhlescrus@gmail.com",
+    "url": "https://ohhlescrus.fr",
+    "sameAs": ["https://www.facebook.com/Ohhlescrusdewasquehal/"],
+    "priceRange": "€€",
+    "servesCuisine": ["Fromagerie", "Cave à vins", "Charcuterie", "Épicerie fine"],
+    "hasMap": "https://www.google.com/maps?q=12+Place+de+la+République+59290+Wasquehal",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Place de la République",
+      "addressLocality": "Wasquehal",
+      "postalCode": "59290",
+      "addressRegion": "Hauts-de-France",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.6695868,
+      "longitude": 3.1294835
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "15:30", "closes": "19:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "19:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:30", "closes": "19:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:30", "closes": "12:45" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "57"
+    }
+  }
+  </script>
+
+  <!-- Fonts : Cormorant Garamond (élégant, vinicole) + DM Sans (lisible, moderne) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ─────────── TOKENS — palette terroir & cave ─────────── */
+    :root {
+      --terre:   #F5F0E8;   /* Crème-parchemin, couleur principal */
+      --terre2:  #EDE4D2;
+      --terre3:  #DFD3BB;
+      --bordeaux:#6B2D3E;   /* Bordeaux profond — accent principal */
+      --bordeaux2:#8B3D52;
+      --bordeaux3:#B06070;
+      --or:      #C49A2A;   /* Or vieilli — détails & accentuation */
+      --or2:     #D4AF5A;
+      --or3:     #E8CF88;
+      --encre:   #1A1510;
+      --encre2:  #4A3C30;
+      --encre3:  #7A6A5A;
+      --ardoise: #3D4A3E;   /* Vert ardoise — cave & terroir */
+      --border:  rgba(26,21,16,.1);
+      --border2: rgba(26,21,16,.06);
+      --r:  4px;
+      --r2: 12px;
+      --shadow: 0 8px 40px rgba(26,21,16,.12);
+      --shadow2: 0 2px 12px rgba(26,21,16,.08);
+    }
+
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0 }
+    html { font-size: 16px; scroll-behavior: smooth }
+    body { background: var(--terre); color: var(--encre); font-family: 'DM Sans', sans-serif; font-weight: 300; overflow-x: hidden }
+    img { display: block; max-width: 100%; height: auto }
+    a { color: inherit; text-decoration: none }
+    ul { list-style: none }
+    button { font-family: inherit; cursor: pointer }
+
+    /* ─────────── SCROLL PROGRESS ─────────── */
+    #progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--bordeaux), var(--or2));
+      z-index: 999; transition: width .05s linear;
+      will-change: width;
+    }
+
+    /* ─────────── PRELOADER ─────────── */
+    #preloader {
+      position: fixed; inset: 0; background: var(--encre); z-index: 9000;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;
+      transition: opacity .6s ease, visibility .6s;
+    }
+    #preloader.done { opacity: 0; visibility: hidden }
+    .pre-logo {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 2.5rem; color: var(--terre); letter-spacing: .06em; text-align: center; line-height: 1.1;
+    }
+    .pre-logo span { color: var(--or2) }
+    .pre-logo em { font-size: 1rem; font-style: normal; letter-spacing: .2em; text-transform: uppercase; color: var(--encre3); display: block; margin-top: .4rem }
+    .pre-bar {
+      width: 140px; height: 1px; background: rgba(245,240,232,.12); position: relative; overflow: hidden;
+    }
+    .pre-bar::after {
+      content: ''; position: absolute; left: -100%; top: 0; width: 100%; height: 100%;
+      background: var(--bordeaux); animation: preload 1.4s ease forwards;
+    }
+    @keyframes preload { to { left: 0 } }
+
+    /* ─────────── NAV ─────────── */
+    #nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(245,240,232,.94);
+      backdrop-filter: blur(14px) saturate(1.5);
+      -webkit-backdrop-filter: blur(14px) saturate(1.5);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5vw;
+      transition: box-shadow .3s;
+    }
+    #nav.scrolled { box-shadow: 0 4px 24px rgba(26,21,16,.1) }
+    .nav-inner {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      align-items: center; height: 70px;
+    }
+    .nav-left { display: flex; gap: 2rem; align-items: center }
+    .nav-right { display: flex; gap: 1.25rem; justify-content: flex-end; align-items: center }
+    .nav-link {
+      font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--encre2);
+      transition: color .2s; position: relative; padding-bottom: 2px;
+    }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+      background: var(--bordeaux); transition: width .3s;
+    }
+    .nav-link:hover { color: var(--encre) }
+    .nav-link:hover::after { width: 100% }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-style: italic;
+      color: var(--encre); letter-spacing: .03em; text-align: center; white-space: nowrap; line-height: 1.1;
+    }
+    .nav-logo span { color: var(--bordeaux) }
+    .nav-logo em { display: block; font-size: .5rem; font-style: normal; letter-spacing: .22em; text-transform: uppercase; color: var(--encre3); font-family: 'DM Sans', sans-serif; margin-top: 1px }
+
+    /* Favoris badge nav */
+    #fav-toggle {
+      position: relative; background: none; border: none;
+      display: flex; align-items: center; gap: .4rem;
+      font-size: .7rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--encre2); transition: color .2s; padding: .4rem;
+    }
+    #fav-toggle:hover { color: var(--bordeaux) }
+    #fav-toggle svg { width: 16px; height: 16px; transition: fill .2s }
+    #fav-toggle.has-favs svg { fill: var(--bordeaux3); stroke: var(--bordeaux3) }
+    #fav-count {
+      position: absolute; top: -2px; right: -2px;
+      background: var(--bordeaux); color: var(--terre); border-radius: 50%;
+      width: 16px; height: 16px; font-size: .6rem; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transform: scale(0); transition: all .25s;
+    }
+    #fav-count.show { opacity: 1; transform: scale(1) }
+
+    .nav-phone {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-size: .78rem; font-weight: 500; color: var(--encre);
+      letter-spacing: .04em; transition: color .2s;
+    }
+    .nav-phone:hover { color: var(--bordeaux) }
+    .nav-phone svg { color: var(--bordeaux); flex-shrink: 0 }
+
+    .burger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: .3rem;
+    }
+    .burger span { width: 22px; height: 1px; background: var(--encre); display: block; transition: all .3s }
+    .burger.open span:nth-child(1) { transform: rotate(45deg) translate(4px,4px) }
+    .burger.open span:nth-child(2) { opacity: 0 }
+    .burger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px,-4px) }
+
+    /* ─────────── MOBILE MENU ─────────── */
+    .mob-menu {
+      display: none; position: fixed; inset: 0; background: var(--encre); z-index: 190;
+      flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+    }
+    .mob-menu.open { display: flex }
+    .mob-menu a { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-style: italic; color: var(--terre); transition: color .2s }
+    .mob-menu a:hover { color: var(--or2) }
+    .mob-menu .nav-phone { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-style: normal; margin-top: .5rem; color: var(--encre3) }
+    .mob-menu .nav-phone:hover { color: var(--bordeaux3) }
+    .mob-menu .nav-phone svg { color: var(--bordeaux3) }
+
+    /* ─────────── FAVORIS DRAWER ─────────── */
+    #fav-drawer {
+      position: fixed; inset: 0; z-index: 500; pointer-events: none;
+    }
+    #fav-overlay {
+      position: absolute; inset: 0; background: rgba(26,21,16,.5);
+      opacity: 0; transition: opacity .35s; backdrop-filter: blur(4px);
+    }
+    #fav-panel {
+      position: absolute; top: 0; right: 0; bottom: 0; width: min(420px, 100vw);
+      background: var(--terre); display: flex; flex-direction: column;
+      transform: translateX(100%); transition: transform .4s cubic-bezier(.25,.46,.45,.94);
+      box-shadow: -8px 0 48px rgba(26,21,16,.15);
+    }
+    #fav-drawer.open { pointer-events: all }
+    #fav-drawer.open #fav-overlay { opacity: 1 }
+    #fav-drawer.open #fav-panel { transform: translateX(0) }
+
+    .fav-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 1.75rem; border-bottom: 1px solid var(--border);
+    }
+    .fav-header h2 {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; font-style: italic;
+    }
+    .fav-header h2 span { font-style: normal; color: var(--encre3); font-size: .85rem; margin-left: .5rem; font-family: 'DM Sans', sans-serif }
+    #fav-close {
+      background: none; border: none; font-size: 1.4rem; color: var(--encre2);
+      transition: color .2s; line-height: 1; padding: .25rem;
+    }
+    #fav-close:hover { color: var(--bordeaux) }
+
+    .fav-body { flex: 1; overflow-y: auto; padding: 1.25rem 1.75rem; display: flex; flex-direction: column; gap: .75rem }
+    .fav-empty {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      flex: 1; gap: 1rem; color: var(--encre3); text-align: center; padding: 2rem;
+    }
+    .fav-empty svg { opacity: .3 }
+    .fav-empty p { font-size: .88rem; line-height: 1.7 }
+
+    .fav-item {
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--terre2); border-radius: var(--r2); padding: .75rem 1rem;
+      border: 1px solid var(--border2);
+      animation: fadeSlideIn .3s ease forwards;
+    }
+    @keyframes fadeSlideIn { from { opacity: 0; transform: translateX(12px) } to { opacity: 1; transform: none } }
+    .fav-item-img {
+      width: 56px; height: 72px; object-fit: cover; border-radius: 6px;
+      background: var(--terre3); flex-shrink: 0;
+    }
+    .fav-item-info { flex: 1 }
+    .fav-item-name { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: .95rem }
+    .fav-item-ref { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--bordeaux); margin-top: .15rem }
+    .fav-item-price { font-size: .82rem; color: var(--encre2); margin-top: .2rem }
+    .fav-remove {
+      background: none; border: none; color: var(--encre3); font-size: 1rem;
+      padding: .25rem; transition: color .2s; flex-shrink: 0;
+    }
+    .fav-remove:hover { color: var(--bordeaux) }
+
+    .fav-footer {
+      padding: 1.25rem 1.75rem; border-top: 1px solid var(--border);
+      display: flex; flex-direction: column; gap: .75rem;
+    }
+    .fav-cta {
+      display: flex; align-items: center; justify-content: center; gap: .5rem;
+      background: var(--bordeaux); color: var(--terre); border: none;
+      padding: .9rem 1.5rem; border-radius: 100px;
+      font-size: .75rem; letter-spacing: .12em; text-transform: uppercase;
+      transition: background .25s, color .25s;
+    }
+    .fav-cta:hover { background: var(--encre); color: var(--terre) }
+    .fav-clear {
+      background: none; border: none; color: var(--encre3);
+      font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+      text-align: center; transition: color .2s;
+    }
+    .fav-clear:hover { color: var(--bordeaux) }
+
+    /* ─────────── TOAST ─────────── */
+    #toast {
+      position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(0);
+      background: var(--encre); color: var(--terre);
+      padding: .65rem 1.4rem; border-radius: 100px;
+      font-size: .78rem; letter-spacing: .06em;
+      display: none; align-items: center; gap: .6rem;
+      z-index: 600; transition: opacity .35s ease, transform .35s cubic-bezier(.34,1.56,.64,1);
+      white-space: nowrap; box-shadow: 0 8px 32px rgba(26,21,16,.28);
+      pointer-events: none; opacity: 0;
+    }
+    #toast.show { display: flex; opacity: 1; transform: translateX(-50%) translateY(-4px) }
+    #toast .t-heart { color: var(--bordeaux3) }
+
+    /* ─────────── HERO ─────────── */
+    #hero { position: relative; height: 90svh; display: flex; overflow: hidden; }
+    .hero-col { flex: 1; position: relative; overflow: hidden }
+    .hero-col img { width: 100%; height: 100%; object-fit: cover; transition: transform 9s ease; will-change: transform }
+    .hero-col:hover img { transform: scale(1.06) }
+    .hero-col:nth-child(2) { flex: 1.3 }
+    .hero-col:nth-child(3) { flex: .9 }
+    .hero-col::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 30%, rgba(26,21,16,.58));
+    }
+    .hero-col+.hero-col { border-left: 2px solid rgba(196,154,42,.35) }
+    .hero-text {
+      position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%);
+      z-index: 10; text-align: center; white-space: nowrap; pointer-events: none;
+    }
+    .hero-kicker {
+      display: inline-block;
+      font-size: .65rem; letter-spacing: .24em; text-transform: uppercase; color: var(--or3); margin-bottom: .9rem;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem,5.5vw,5.5rem); font-weight: 400; color: #fff; line-height: 1.05;
+    }
+    .hero-title em { font-style: italic; color: var(--or2) }
+    .hero-btn {
+      pointer-events: all; display: inline-block; margin-top: 1.6rem;
+      border: 1px solid rgba(255,255,255,.55); color: #fff;
+      padding: .7rem 2.2rem; border-radius: 100px;
+      font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
+      backdrop-filter: blur(4px); background: rgba(255,255,255,.07);
+      transition: background .25s, border-color .25s, color .25s;
+    }
+    .hero-btn:hover { background: var(--bordeaux); border-color: var(--bordeaux); color: #fff }
+    .hero-tag {
+      position: absolute; top: 1.5rem; right: 1.5rem; z-index: 10;
+      background: var(--bordeaux); color: var(--terre);
+      font-size: .6rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+      padding: .35rem .95rem; border-radius: 100px;
+    }
+    .scroll-hint {
+      position: absolute; bottom: 1.5rem; right: 5vw; z-index: 10;
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .6rem; letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.45); animation: bounce 2.5s ease-in-out infinite;
+    }
+    @keyframes bounce { 0%,100% { transform: translateY(0) } 50% { transform: translateY(5px) } }
+
+    /* ─────────── MARQUEE ─────────── */
+    .marquee-wrap {
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bordeaux); padding: .85rem 0;
+    }
+    .marquee-track {
+      display: flex; width: max-content;
+      animation: marquee 40s linear infinite;
+      will-change: transform;
+    }
+    .marquee-track:hover { animation-play-state: paused }
+    @keyframes marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+    .marquee-item {
+      display: inline-flex; align-items: center; gap: .7rem;
+      padding: 0 1.5rem; white-space: nowrap;
+      font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+      color: rgba(245,240,232,.55);
+    }
+    .marquee-sep { color: var(--or3); font-size: .75rem }
+
+    /* ─────────── SECTION HELPERS ─────────── */
+    .section-tag { font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; color: var(--bordeaux); display: block; margin-bottom: .75rem }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem,3.2vw,3rem); font-weight: 400; line-height: 1.12 }
+    .section-title em { font-style: italic; color: var(--bordeaux) }
+
+    /* ─────────── CATALOGUE (Sélection) ─────────── */
+    #catalogue { padding: 5.5rem 5vw }
+    .cat-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2.5rem; gap: 2rem; flex-wrap: wrap }
+    .cat-sub { font-size: .85rem; color: var(--encre2); max-width: 34ch; line-height: 1.8; text-align: right }
+
+    /* Filtres */
+    .cat-filters {
+      display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 2.25rem;
+      padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);
+    }
+    .filter-btn {
+      font-size: .66rem; letter-spacing: .14em; text-transform: uppercase;
+      padding: .45rem 1.15rem; border-radius: 100px;
+      border: 1px solid var(--border); background: transparent; color: var(--encre2);
+      transition: all .2s; cursor: pointer;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--bordeaux); color: var(--terre); border-color: var(--bordeaux);
+    }
+
+    /* Grille produits */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+    .prod { position: relative; cursor: default }
+    .prod.hidden { display: none }
+
+    .prod-img-wrap {
+      position: relative; overflow: hidden; border-radius: var(--r2);
+      background: var(--terre2);
+      aspect-ratio: 3/4;
+    }
+    .prod-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.25,.46,.45,.94) }
+    .prod:hover .prod-img-wrap img { transform: scale(1.05) }
+    .prod-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,21,16,.35) 0%, transparent 45%);
+      opacity: 0; transition: opacity .4s;
+    }
+    .prod:hover .prod-overlay { opacity: 1 }
+
+    .prod-badge {
+      position: absolute; top: .9rem; left: .9rem;
+      font-size: .58rem; letter-spacing: .12em; text-transform: uppercase;
+      padding: .3rem .8rem; border-radius: 100px; font-weight: 500;
+    }
+    .badge-new { background: var(--bordeaux); color: var(--terre) }
+    .badge-exclu { background: var(--or); color: var(--encre) }
+    .badge-last { background: var(--encre); color: var(--terre) }
+    .badge-saison { background: var(--ardoise); color: var(--terre) }
+
+    .prod-fav {
+      position: absolute; top: .9rem; right: .9rem;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(245,240,232,.9); border: none;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transform: scale(.85); transition: all .3s;
+      backdrop-filter: blur(4px);
+    }
+    .prod-fav svg { width: 14px; height: 14px; stroke: var(--encre2); transition: all .2s }
+    .prod:hover .prod-fav, .prod-fav.active { opacity: 1; transform: scale(1) }
+    .prod-fav.active svg { fill: var(--bordeaux); stroke: var(--bordeaux) }
+    .prod-fav:hover svg { stroke: var(--bordeaux) }
+
+    .prod-info { padding: .85rem .15rem 0 }
+    .prod-cat { font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: var(--bordeaux) }
+    .prod-name { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-style: italic; margin-top: .2rem }
+    .prod-ref { font-size: .62rem; color: var(--encre3); letter-spacing: .06em; margin-top: .1rem }
+    .prod-footer { display: flex; align-items: center; justify-content: space-between; margin-top: .5rem; flex-wrap: wrap; gap: .5rem }
+    .prod-price { font-size: .92rem; font-weight: 500 }
+    .prod-sizes { display: flex; gap: .3rem; flex-wrap: wrap }
+    .prod-size {
+      font-size: .58rem; letter-spacing: .08em; border: 1px solid var(--border);
+      padding: .18rem .5rem; border-radius: 4px; color: var(--encre3); transition: all .2s;
+    }
+    .prod:hover .prod-size { border-color: var(--bordeaux2); color: var(--encre2) }
+
+    /* ─────────── LOOKBOOK (Inspirations) ─────────── */
+    #lookbook { padding: 5rem 0; background: var(--terre2) }
+    .lb-head {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      padding: 0 5vw 2.25rem; gap: 2rem; flex-wrap: wrap;
+    }
+    .lb-sub { font-size: .85rem; color: var(--encre2); max-width: 30ch; line-height: 1.8 }
+    .lb-scroll-wrap { position: relative }
+    .lb-track {
+      display: flex; gap: 1.25rem;
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      padding: 0.5rem 5vw 1.5rem; cursor: grab;
+      scrollbar-width: none;
+    }
+    .lb-track::-webkit-scrollbar { display: none }
+    .lb-track.active { cursor: grabbing }
+    .lb-slide { flex-shrink: 0; width: 280px; scroll-snap-align: start; position: relative; border-radius: var(--r2); overflow: hidden; box-shadow: 0 6px 28px rgba(26,21,16,.13) }
+    .lb-slide img {
+      width: 100%; height: 380px; object-fit: cover;
+      display: block;
+      transition: transform .5s ease; will-change: transform;
+    }
+    .lb-slide:hover img { transform: scale(1.05) }
+    .lb-slide-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 1.2rem 1rem 1rem;
+      background: linear-gradient(to top, rgba(26,21,16,.72) 0%, transparent 100%);
+    }
+    .lb-slide-caption span {
+      font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: var(--or3); display: block;
+    }
+    .lb-slide-caption p {
+      font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: rgba(245,240,232,.92); margin-top: .2rem;
+    }
+    .lb-arrow {
+      position: absolute; top: 50%; transform: translateY(-60%);
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--terre); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow2); transition: all .25s; color: var(--encre2);
+      z-index: 10;
+    }
+    .lb-arrow:hover { background: var(--bordeaux); color: var(--terre); border-color: var(--bordeaux) }
+    .lb-arrow.prev { left: 1vw }
+    .lb-arrow.next { right: 1vw }
+
+    /* ─────────── BANNIERE HISTOIRE ─────────── */
+    #banniere {
+      display: grid; grid-template-columns: 1fr 1fr; margin: 0 3vw; border-radius: 20px;
+      overflow: hidden; background: var(--encre);
+    }
+    .ban-img { position: relative; min-height: 520px; overflow: hidden }
+    .ban-img img { width: 100%; height: 100%; object-fit: cover; opacity: .75; transition: transform 8s ease }
+    #banniere:hover .ban-img img { transform: scale(1.04) }
+    .ban-text {
+      padding: 4rem 3.5rem;
+      display: flex; flex-direction: column; justify-content: center;
+      background: var(--encre);
+    }
+    .ban-text .section-tag { color: var(--or2) }
+    .ban-text .section-title { color: var(--terre) }
+    .ban-text .section-title em { color: var(--bordeaux3) }
+    .ban-body { font-size: .9rem; line-height: 1.9; color: rgba(245,240,232,.65); margin-top: 1.25rem; max-width: 38ch }
+    .ban-divider { width: 48px; height: 1px; background: var(--bordeaux); margin: 1.75rem 0 }
+    .ban-facts { display: flex; gap: 2.5rem; flex-wrap: wrap }
+    .ban-fact-num { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; color: var(--or2); line-height: 1 }
+    .ban-fact-lbl { display: block; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(245,240,232,.45); margin-top: .2rem }
+
+    /* ─────────── INSTAGRAM / FACEBOOK ─────────── */
+    #instagram { padding: 5rem 5vw }
+    .ig-head {
+      display: flex; flex-direction: column; align-items: flex-start;
+      gap: .75rem; margin-bottom: 2.25rem;
+    }
+    .ig-handle {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--encre3);
+    }
+    .ig-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: .75rem; margin-bottom: 2rem;
+    }
+    .ig-item { position: relative; overflow: hidden; border-radius: var(--r); aspect-ratio: 1 }
+    .ig-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease }
+    .ig-item:hover img { transform: scale(1.08) }
+    .ig-item-overlay {
+      position: absolute; inset: 0; background: rgba(107,45,62,.6);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity .3s; color: var(--terre);
+    }
+    .ig-item-overlay svg { width: 28px; height: 28px }
+    .ig-item:hover .ig-item-overlay { opacity: 1 }
+    .ig-cta { text-align: center }
+    .ig-cta a {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--bordeaux); border-bottom: 1px solid var(--bordeaux);
+      padding-bottom: 2px; transition: color .2s, border-color .2s;
+    }
+    .ig-cta a:hover { color: var(--encre); border-color: var(--encre) }
+
+    /* ─────────── INFOS PRATIQUES ─────────── */
+    #infos {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .info-cell {
+      padding: 3.5rem 5vw; border-right: 1px solid var(--border);
+      transition: background .3s;
+    }
+    .info-cell:last-child { border-right: none }
+    .info-cell:hover { background: var(--terre2) }
+    .info-label { font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--bordeaux); display: block; margin-bottom: .9rem }
+    .info-title { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 400; line-height: 1.3; margin-bottom: 1rem }
+    .info-body { font-size: .85rem; color: var(--encre2); line-height: 1.85 }
+    .info-body a { color: var(--bordeaux); text-decoration: underline; text-underline-offset: 3px; transition: color .2s }
+    .info-body a:hover { color: var(--encre) }
+
+    .call-number {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.45rem;
+      color: var(--encre); transition: color .2s; margin-bottom: .75rem;
+    }
+    .call-number:hover { color: var(--bordeaux) }
+    .call-number svg { color: var(--bordeaux); width: 20px; height: 20px; flex-shrink: 0 }
+    .call-note { font-size: .82rem; color: var(--encre3); line-height: 1.8; max-width: 28ch }
+
+    /* ─────────── FOOTER ─────────── */
+    footer { background: var(--encre); color: var(--terre) }
+    .footer-inner {
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+      padding: 3.5rem 5vw; gap: 3rem; border-bottom: 1px solid rgba(245,240,232,.08);
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic;
+      color: var(--terre); display: block; margin-bottom: .6rem;
+    }
+    .footer-tagline { font-size: .82rem; color: rgba(245,240,232,.4); line-height: 1.75 }
+    .footer-nav {
+      display: flex; flex-direction: column; gap: .7rem;
+    }
+    .footer-nav a {
+      font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(245,240,232,.45); transition: color .2s;
+    }
+    .footer-nav a:hover { color: var(--or2) }
+    .footer-social {
+      display: flex; flex-direction: column; gap: .7rem;
+    }
+    .footer-social a {
+      font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(245,240,232,.45); transition: color .2s;
+    }
+    .footer-social a:hover { color: var(--bordeaux3) }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 5vw; flex-wrap: wrap; gap: 1rem;
+      font-size: .68rem; letter-spacing: .06em; color: rgba(245,240,232,.25);
+    }
+
+    /* ─────────── FADE ANIMATIONS ─────────── */
+    .fade { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease }
+    .fade.in { opacity: 1; transform: none }
+
+    /* ─────────── RESPONSIVE ─────────── */
+    @media (max-width: 1100px) {
+      .cat-grid { grid-template-columns: repeat(3, 1fr) }
+      .ig-grid { grid-template-columns: repeat(4, 1fr) }
+    }
+    @media (max-width: 800px) {
+      .nav-left, .nav-right { display: none }
+      .burger { display: flex }
+      .nav-inner { grid-template-columns: auto 1fr }
+      .nav-logo { text-align: left }
+
+      #hero { height: 70svh; }
+      .hero-col:nth-child(2), .hero-col:nth-child(3) { display: none }
+      .hero-col:nth-child(1) { flex: 1; width: 100% }
+      .hero-text { white-space: normal; width: 90%; left: 5%; transform: none; text-align: left }
+      .scroll-hint { display: none }
+
+      .cat-grid { grid-template-columns: repeat(2, 1fr) }
+      .ig-grid { grid-template-columns: repeat(3, 1fr) }
+
+      #banniere { grid-template-columns: 1fr; margin: 0 }
+      .ban-img { min-height: 50vw }
+      .ban-text { padding: 3rem 5vw }
+
+      #infos { grid-template-columns: 1fr }
+      .info-cell { border-right: none; border-bottom: 1px solid var(--border) }
+      .info-cell:last-child { border-bottom: none }
+
+      .footer-inner { grid-template-columns: 1fr; text-align: center }
+      .footer-social { align-items: center }
+      .footer-nav { flex-direction: row; justify-content: center; flex-wrap: wrap }
+
+      .lb-arrow { display: none }
+    }
+    @media (max-width: 600px) {
+      .cat-grid { grid-template-columns: repeat(2, 1fr); gap: .75rem }
+      .ig-grid { grid-template-columns: repeat(3, 1fr) }
+      .ban-facts { flex-direction: column; gap: 1.5rem }
+      .cat-sub, .lb-sub { text-align: left }
+    }
+    @media (max-width: 400px) {
+      .ig-grid { grid-template-columns: repeat(2, 1fr) }
+    }
+
+    /* ─────────── PRINT ─────────── */
+    @media print {
+      #nav, .marquee-wrap, #preloader, #fav-drawer, #toast, #progress-bar { display: none }
+      .fade { opacity: 1; transform: none }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Progress bar -->
+<div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
+<!-- Preloader -->
+<div id="preloader" aria-hidden="true">
+  <div class="pre-logo">Ohh !! <span>Les Crus</span><em>Cave · Fromagerie · Charcuterie · Épicerie</em></div>
+  <div class="pre-bar"></div>
+</div>
+
+<!-- Toast -->
+<div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<!-- Favoris Drawer -->
+<div id="fav-drawer" aria-label="Votre sélection" aria-modal="true">
+  <div id="fav-overlay"></div>
+  <div id="fav-panel">
+    <div class="fav-header">
+      <h2>Ma sélection <span id="fav-count-label"></span></h2>
+      <button id="fav-close" aria-label="Fermer">✕</button>
+    </div>
+    <div class="fav-body" id="fav-list">
+      <div class="fav-empty" id="fav-empty">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <p>Aucun produit sélectionné.<br/>Cliquez sur ♥ pour mémoriser vos coups de cœur.</p>
+      </div>
+    </div>
+    <div class="fav-footer" id="fav-footer" style="display:none">
+      <button class="fav-cta" id="fav-copy-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        Copier ma sélection
+      </button>
+      <button class="fav-clear" id="fav-clear-btn">Tout effacer</button>
+    </div>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav id="nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="#catalogue" class="nav-link">Nos produits</a>
+      <a href="#lookbook" class="nav-link">Univers</a>
+      <a href="#infos" class="nav-link">Accès & horaires</a>
+    </div>
+    <a href="#hero" class="nav-logo">Ohh !! <span>Les Crus</span><em>Wasquehal</em></a>
+    <div class="nav-right">
+      <a href="#banniere" class="nav-link">Notre histoire</a>
+      <button id="fav-toggle" aria-label="Ma sélection (0 article)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <span id="fav-count">0</span>
+        <span>Sélection</span>
+      </button>
+      <a href="tel:+33328073370" class="nav-phone">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        03 28 07 33 70
+      </a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+  <a href="#catalogue">Nos produits</a>
+  <a href="#lookbook">Univers</a>
+  <a href="#banniere">Notre histoire</a>
+  <a href="#infos">Accès & horaires</a>
+  <a href="tel:+33328073370" class="nav-phone">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    03 28 07 33 70
+  </a>
+</div>
+
+<!-- Hero -->
+<section id="hero" aria-label="Bannière principale — Ohh !! Les Crus de Wasquehal">
+  <div class="hero-col">
+    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&h=1100&fit=crop&q=85" alt="Cave à vins Ohh !! Les Crus — sélection de vins de terroir à Wasquehal" width="800" height="1100" fetchpriority="high" decoding="sync"/>
+  </div>
+  <div class="hero-col">
+    <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?w=900&h=1100&fit=crop&q=85" alt="Plateau fromages affinés et charcuterie fine — Ohh !! Les Crus Wasquehal" width="900" height="1100" fetchpriority="high" decoding="sync"/>
+    <span class="hero-tag">Nouveautés fromagères</span>
+  </div>
+  <div class="hero-col">
+    <img src="https://images.unsplash.com/photo-1579126038374-6064e9370f0f?w=700&h=1100&fit=crop&q=85" alt="Épicerie fine et spiritueux — Ohh !! Les Crus Wasquehal" width="700" height="1100" fetchpriority="high" decoding="sync"/>
+  </div>
+  <div class="hero-text">
+    <span class="hero-kicker">Cave · Fromagerie · Charcuterie · Épicerie — Wasquehal</span>
+    <h1 class="hero-title">Vos papilles<br/><em>vous remercieront.</em></h1>
+    <a href="#catalogue" class="hero-btn">Découvrir notre sélection</a>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    Défiler
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Vins de terroir français <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Fromages affinés <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Charcuterie d'Italie, d'Espagne & de Corse <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Bières régionales <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Champagnes & Spiritueux <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Plateaux sur mesure <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Wasquehal · Place de la République <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Conseils de Gilles, votre caviste <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Note 4,9 ★ · 57 avis <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Soirées dégustation <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Vins de terroir français <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Fromages affinés <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Charcuterie d'Italie, d'Espagne & de Corse <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Bières régionales <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Champagnes & Spiritueux <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Plateaux sur mesure <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Wasquehal · Place de la République <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Conseils de Gilles, votre caviste <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Note 4,9 ★ · 57 avis <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Soirées dégustation <span class="marquee-sep">✦</span></span>
+  </div>
+</div>
+
+<!-- Catalogue / Sélection -->
+<section id="catalogue" aria-labelledby="catalogue-title">
+  <div class="cat-head fade">
+    <div>
+      <span class="section-tag">La sélection du moment</span>
+      <h2 class="section-title" id="catalogue-title">Nos <em>pépites</em><br/>à découvrir</h2>
+    </div>
+    <p class="cat-sub">Une sélection rigoureuse pour que chaque accord soit une révélation. Fromages affinés, vins de terroir, charcuteries d'exception.</p>
+  </div>
+
+  <div class="cat-filters fade" role="group" aria-label="Filtrer par univers">
+    <button class="filter-btn active" data-filter="all">Tout voir</button>
+    <button class="filter-btn" data-filter="vin">Vins</button>
+    <button class="filter-btn" data-filter="fromage">Fromages</button>
+    <button class="filter-btn" data-filter="charcuterie">Charcuteries</button>
+    <button class="filter-btn" data-filter="biere">Bières &amp; Spiritueux</button>
+    <button class="filter-btn" data-filter="epicerie">Épicerie</button>
+  </div>
+
+  <div class="cat-grid" id="catalogue-grid">
+
+    <!-- Vin 1 -->
+    <article class="prod fade" data-cat="vin" data-id="p1" data-name="Clos du Jaugueyron — Margaux 2019" data-ref="OLC-V01" data-price="À demander" data-img="photo-margaux.jpg">
+      <div class="prod-img-wrap">
+        <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?w=600&h=800&fit=crop&q=80" alt="Clos du Jaugueyron Margaux 2019 — Ohh !! Les Crus Wasquehal" loading="lazy" width="600" height="800"/>
+        <div class="prod-overlay" aria-hidden="true"></div>
+        <span class="prod-badge badge-exclu" aria-label="Coup de cœur caviste">Coup de ♥</span>
+        <button class="prod-fav" aria-label="Ajouter Clos du Jaugueyron aux favoris" data-id="p1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="prod-info">
+        <span class="prod-cat">Vin rouge · Bordeaux</span>
+        <div class="prod-name">Clos du Jaugueyron — Margaux 2019</div>
+        <div class="prod-ref">Domaine Théron · 75 cl</div>
+        <div class="prod-footer">
+          <span class="prod-price">En boutique</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Fromage 1 -->
+    <article class="prod fade" data-cat="fromage" data-id="p2" data-name="Comté affiné 24 mois" data-ref="OLC-F01" data-price="À la coupe" data-img="photo-comte.jpg">
+      <div class="prod-img-wrap">
+        <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=600&h=800&fit=crop&q=80" alt="Comté affiné 24 mois — Fromagerie Ohh !! Les Crus Wasquehal" loading="lazy" width="600" height="800"/>
+        <div class="prod-overlay" aria-hidden="true"></div>
+        <span class="prod-badge badge-new" aria-label="Arrivage">Arrivage</span>
+        <button class="prod-fav" aria-label="Ajouter Comté 24 mois aux favoris" data-id="p2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="prod-info">
+        <span class="prod-cat">Fromage · AOP</span>
+        <div class="prod-name">Comté affiné 24 mois</div>
+        <div class="prod-ref">Affinage en cave · Vache lait cru</div>
+        <div class="prod-footer">
+          <span class="prod-price">À la coupe</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Charcuterie 1 -->
+    <article class="prod fade" data-cat="charcuterie" data-id="p3" data-name="Jambon Pata Negra Bellota" data-ref="OLC-C01" data-price="À la tranche" data-img="photo-jambon.jpg">
+      <div class="prod-img-wrap">
+        <img src="https://images.unsplash.com/photo-1625937286074-9b71e46b9f19?w=600&h=800&fit=crop&q=80" alt="Jambon Pata Negra Bellota — Charcuterie fine Ohh !! Les Crus" loading="lazy" width="600" height="800"/>
+        <div class="prod-overlay" aria-hidden="true"></div>
+        <span class="prod-badge badge-exclu" aria-label="Exclusivité">Exclusif</span>
+        <button class="prod-fav" aria-label="Ajouter Pata Negra aux favoris" data-id="p3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="prod-info">
+        <span class="prod-cat">Charcuterie · Espagne</span>
+        <div class="prod-name">Jambon Pata Negra Bellota</div>
+        <div class="prod-ref">Ibérique pur · 36 mois</div>
+        <div class="prod-footer">
+          <span class="prod-price">À la tranche</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Fromage 2 -->
+    <article class="prod fade" data-cat="fromage" data-id="p4" data-name="Maroilles fermier AOP" data-ref="OLC-F02" data-price="À la coupe" data-img="photo-maroilles.jpg">
+      <div class="prod-img-wrap">
+        <img src="https://images.unsplash.com/photo-1559561853-08451507cbe7?w=600&h=800&fit=crop&q=80" alt="Maroilles fermier AOP — Fromagerie Ohh !! Les Crus Wasquehal" loading="lazy" width="600" height="800"/>
+        <div class="prod-overlay" aria-hidden="true"></div>
+        <button class="prod-fav" aria-label="Ajouter Maroilles aux favoris" data-id="p4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="prod-info">
+        <span class="prod-cat">Fromage · AOP · Local</span>
+        <div class="prod-name">Maroilles fermier AOP</div>
+        <div class="prod-ref">Région Nord · Lait cru</div>
+        <div class="prod-footer">
+          <span class="prod-price">À la coupe</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Vin 2 -->
+    <article class="prod fade" data-cat="vin" data-id="p5" data-name="Balcones Texas Pot Still Bourbon 70cl" data-ref="OLC-S01" data-price="En boutique" data-img="photo-bourbon.jpg">
+      <div class="prod-img-wrap">
+        <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=600&h=800&fit=crop&q=80" alt="Balcones Texas Pot Still Bourbon — Spiritueux Ohh !! Les Crus" loading="lazy" width="600" height="800"/>
+        <div class="prod-overlay" aria-hidden="true"></div>
+        <span class="prod-badge badge-new" aria-label="Nouveauté">Nouveauté</span>
+        <button class="prod-fav" aria-label="Ajouter Balcones Bourbon aux favoris" data-id="p5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="prod-info">
+        <span class="prod-cat">Spiritueux · Whisky</span>
+        <div class="prod-name">Balcones Texas Bourbon</div>
+        <div class="prod-ref">Pot Still · 70cl · 46%</div>
+        <div class="prod-footer">
+          <span class="prod-price">En boutique</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Bière -->
+    <article class="prod fade" data-cat="biere" data-id="p6" data-name="Bière Gobrecht Triple — Médaille d'Argent" data-ref="OLC-B01" data-price="En boutique" data-img="photo-biere.jpg">
+      <div class="prod-img-wrap">
+        <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=600&h=800&fit=crop&q=80" alt="Bière Gobrecht Triple médaille d'argent — Ohh !! Les Crus" loading="lazy" width="600" height="800"/>
+        <div class="prod-overlay" aria-hidden="true"></div>
+        <span class="prod-badge badge-saison" aria-label="Médaillée">★ Médaillée</span>
+        <button class="prod-fav" aria-label="Ajouter Gobrecht Triple aux favoris" data-id="p6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="prod-info">
+        <span class="prod-cat">Bière · Brasserie Gobrecht</span>
+        <div class="prod-name">Triple — Médaille d'Argent</div>
+        <div class="prod-ref">France Bière Challenge · Régionale</div>
+        <div class="prod-footer">
+          <span class="prod-price">En boutique</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Charcuterie 2 -->
+    <article class="prod fade" data-cat="charcuterie" data-id="p7" data-name="Plateau Raclette & Charcuterie" data-ref="OLC-P01" data-price="Sur commande" data-img="photo-raclette.jpg">
+      <div class="prod-img-wrap">
+        <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=600&h=800&fit=crop&q=80" alt="Plateau raclette et charcuterie sur mesure — Ohh !! Les Crus Wasquehal" loading="lazy" width="600" height="800"/>
+        <div class="prod-overlay" aria-hidden="true"></div>
+        <span class="prod-badge badge-exclu" aria-label="Sur mesure">Sur mesure</span>
+        <button class="prod-fav" aria-label="Ajouter Plateau Raclette aux favoris" data-id="p7">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="prod-info">
+        <span class="prod-cat">Plateau · Événements</span>
+        <div class="prod-name">Plateau Raclette & Charcuterie</div>
+        <div class="prod-ref">Composé sur mesure en boutique</div>
+        <div class="prod-footer">
+          <span class="prod-price">Sur commande</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Épicerie -->
+    <article class="prod fade" data-cat="epicerie" data-id="p8" data-name="Terre de Safres — BIO Lubéron" data-ref="OLC-V02" data-price="En boutique" data-img="photo-bio.jpg">
+      <div class="prod-img-wrap">
+        <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600&h=800&fit=crop&q=80" alt="Cuvée BIO Terre de Safres Domaine Le Novi Lubéron — Ohh !! Les Crus" loading="lazy" width="600" height="800"/>
+        <div class="prod-overlay" aria-hidden="true"></div>
+        <span class="prod-badge badge-saison" aria-label="Bio">🌿 Bio</span>
+        <button class="prod-fav" aria-label="Ajouter Terre de Safres aux favoris" data-id="p8">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+      <div class="prod-info">
+        <span class="prod-cat">Vin Bio · Lubéron</span>
+        <div class="prod-name">Terre de Safres — Le Novi</div>
+        <div class="prod-ref">Grenache · Syrah · Cinsault · Bio</div>
+        <div class="prod-footer">
+          <span class="prod-price">En boutique</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- Lookbook / Univers -->
+<section id="lookbook" aria-labelledby="lookbook-title">
+  <div class="lb-head fade">
+    <div>
+      <span class="section-tag">L'art de la table</span>
+      <h2 class="section-title" id="lookbook-title">Nos <em>accords</em><br/>du moment</h2>
+    </div>
+    <p class="lb-sub">Des associations imaginées en boutique par Gilles, à reproduire pour vos repas.</p>
+  </div>
+  <div class="lb-scroll-wrap">
+    <button class="lb-arrow prev" id="lb-prev" aria-label="Précédent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="lb-track" id="lb-track">
+      <div class="lb-slide">
+        <img src="https://images.unsplash.com/photo-1589881133595-a3c085cb731d?w=560&h=760&fit=crop&q=85" alt="Accord Comté & vins du Jura — Ohh !! Les Crus" loading="lazy" width="280" height="380"/>
+        <div class="lb-slide-caption"><span>Accord 01</span><p>Comté & vins du Jura</p></div>
+      </div>
+      <div class="lb-slide">
+        <img src="https://images.unsplash.com/photo-1625937286074-9b71e46b9f19?w=560&h=760&fit=crop&q=85" alt="Plateau ibérique & Rioja — Ohh !! Les Crus" loading="lazy" width="280" height="380"/>
+        <div class="lb-slide-caption"><span>Accord 02</span><p>Plateau ibérique & Rioja</p></div>
+      </div>
+      <div class="lb-slide">
+        <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?w=560&h=760&fit=crop&q=85" alt="Raclette et charcuteries fines — Ohh !! Les Crus Wasquehal" loading="lazy" width="280" height="380"/>
+        <div class="lb-slide-caption"><span>Accord 03</span><p>La raclette des gourmets</p></div>
+      </div>
+      <div class="lb-slide">
+        <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=560&h=760&fit=crop&q=85" alt="Dégustation whisky & fromages — Ohh !! Les Crus" loading="lazy" width="280" height="380"/>
+        <div class="lb-slide-caption"><span>Accord 04</span><p>Soirée whisky & fromages</p></div>
+      </div>
+      <div class="lb-slide">
+        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=560&h=760&fit=crop&q=85" alt="Coffret vins champagnes fêtes — Ohh !! Les Crus Wasquehal" loading="lazy" width="280" height="380"/>
+        <div class="lb-slide-caption"><span>Accord 05</span><p>Coffret fêtes & champagnes</p></div>
+      </div>
+      <div class="lb-slide">
+        <img src="https://images.unsplash.com/photo-1559561853-08451507cbe7?w=560&h=760&fit=crop&q=85" alt="Maroilles & bières régionales du Nord — Ohh !! Les Crus" loading="lazy" width="280" height="380"/>
+        <div class="lb-slide-caption"><span>Accord 06</span><p>Maroilles & bières du Nord</p></div>
+      </div>
+    </div>
+    <button class="lb-arrow next" id="lb-next" aria-label="Suivant">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- Bannière Histoire -->
+<section id="banniere" class="fade" aria-labelledby="histoire-title">
+  <div class="ban-img">
+    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=900&h=800&fit=crop&q=85" alt="Intérieur boutique Ohh !! Les Crus de Wasquehal — 12 Place de la République" loading="lazy" width="900" height="800"/>
+  </div>
+  <div class="ban-text">
+    <span class="section-tag">Notre histoire</span>
+    <h2 class="section-title" id="histoire-title">Une boutique<br/>née de la<br/><em>passion.</em></h2>
+    <p class="ban-body">Au cœur de Wasquehal, Ohh !! Les Crus est un lieu incontournable pour tous les amateurs de mets de qualité. Gilles, votre caviste passionné, vous guide pour accorder les meilleurs vins de nos terroirs, bières régionales, champagnes et spiritueux. Des artisans de notre région, d'Italie, d'Espagne et de Suisse — vos papilles vous remercieront.</p>
+    <div class="ban-divider"></div>
+    <div class="ban-facts">
+      <div>
+        <span class="ban-fact-num">★ 4.9</span>
+        <span class="ban-fact-lbl">57 avis clients</span>
+      </div>
+      <div>
+        <span class="ban-fact-num">4</span>
+        <span class="ban-fact-lbl">univers gourmands</span>
+      </div>
+      <div>
+        <span class="ban-fact-num">€€</span>
+        <span class="ban-fact-lbl">qualité / prix</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Facebook / Réseaux -->
+<section id="instagram" aria-labelledby="social-title">
+  <div class="ig-head fade">
+    <div class="ig-handle">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      @OhhlescrusdewasquehalWasquehal
+    </div>
+    <h2 class="section-title" id="social-title">Notre <em>univers</em></h2>
+  </div>
+  <div class="ig-grid fade">
+    <div class="ig-item">
+    <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&h=400&fit=crop&q=80" alt="Ohh !! Les Crus — sélection fromages du moment" loading="lazy" width="300" height="300"/>
+      <div class="ig-item-overlay" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </div>
+    </div>
+    <div class="ig-item">
+      <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=400&fit=crop&q=80" alt="Ohh !! Les Crus — cave à vins Wasquehal" loading="lazy" width="300" height="300"/>
+      <div class="ig-item-overlay" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </div>
+    </div>
+    <div class="ig-item">
+      <img src="https://images.unsplash.com/photo-1625937286074-9b71e46b9f19?w=400&h=400&fit=crop&q=80" alt="Ohh !! Les Crus — plateau charcuterie italienne" loading="lazy" width="300" height="300"/>
+      <div class="ig-item-overlay" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </div>
+    </div>
+    <div class="ig-item">
+      <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?w=400&h=400&fit=crop&q=80" alt="Ohh !! Les Crus — dégustation vins Wasquehal" loading="lazy" width="300" height="300"/>
+      <div class="ig-item-overlay" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </div>
+    </div>
+    <div class="ig-item">
+      <img src="https://images.unsplash.com/photo-1579126038374-6064e9370f0f?w=400&h=400&fit=crop&q=80" alt="Ohh !! Les Crus — fromages affinés raclette" loading="lazy" width="300" height="300"/>
+      <div class="ig-item-overlay" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </div>
+    </div>
+    <div class="ig-item">
+      <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=400&h=400&fit=crop&q=80" alt="Ohh !! Les Crus — soirée dégustation Wasquehal" loading="lazy" width="300" height="300"/>
+      <div class="ig-item-overlay" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </div>
+    </div>
+  </div>
+  <div class="ig-cta fade">
+    <a href="https://www.facebook.com/Ohhlescrusdewasquehal/" target="_blank" rel="noopener" aria-label="Suivre Ohh !! Les Crus sur Facebook">
+      Nous suivre sur Facebook
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- Infos pratiques -->
+<section id="infos" aria-label="Informations pratiques">
+  <div class="info-cell fade">
+    <span class="info-label">Venir nous voir</span>
+    <h3 class="info-title">12 Place de la République<br/>59290 Wasquehal</h3>
+    <p class="info-body">
+      Centre-ville de Wasquehal<br/>
+      Proche Métro Croix-Mission (Lille Métropole)<br/><br/>
+      <a href="https://www.google.com/maps?q=12+Place+de+la+République+59290+Wasquehal" target="_blank" rel="noopener">Voir sur Google Maps →</a>
+    </p>
+  </div>
+  <div class="info-cell fade">
+    <span class="info-label">Horaires d'ouverture</span>
+    <h3 class="info-title">Mar–Sam · 9h30–19h30<br/>Dim · 9h30–12h45</h3>
+    <p class="info-body">
+      Lundi fermé.<br/>
+      Mardi : 15h30 – 19h30 uniquement<br/>
+      Mer–Ven : 9h30–12h30 &amp; 15h30–19h30<br/>
+      Samedi : 9h30–13h15 &amp; 14h30–19h30<br/><br/>
+      Commandes de plateaux possibles par téléphone.
+    </p>
+  </div>
+  <div class="info-cell fade">
+    <span class="info-label">Nous appeler</span>
+    <h3 class="info-title">On vous répond avec plaisir</h3>
+    <a href="tel:+33328073370" class="call-number" aria-label="Appeler Ohh !! Les Crus au 03 28 07 33 70">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      03 28 07 33 70
+    </a>
+    <p class="call-note">Pour commander vos plateaux fromages, charcuteries ou coffrets de vins — Gilles et son équipe sont à votre écoute.</p>
+    <br/>
+    <p class="call-note"><a href="mailto:ohhlescrus@gmail.com" style="color:var(--bordeaux);text-decoration:underline;text-underline-offset:3px">ohhlescrus@gmail.com</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <span class="footer-logo">Ohh !! Les Crus</span>
+      <p class="footer-tagline">Cave à vins · Fromagerie affinée · Charcuterie fine · Épicerie<br/>12 Place de la République, 59290 Wasquehal</p>
+    </div>
+    <nav class="footer-nav" aria-label="Navigation secondaire">
+      <a href="#catalogue">Nos produits</a>
+      <a href="#lookbook">Nos accords</a>
+      <a href="#banniere">Notre histoire</a>
+      <a href="#infos">Contact & horaires</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/Ohhlescrusdewasquehal/" target="_blank" rel="noopener">Facebook</a>
+      <a href="tel:+33328073370">03 28 07 33 70</a>
+      <a href="mailto:ohhlescrus@gmail.com">ohhlescrus@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="yr"></span> Ohh !! Les Crus de Wasquehal · 12 Place de la République, 59290 Wasquehal</span>
+    <ul style="display:flex;gap:1.5rem">
+      <li><a href="#" style="transition:color .2s" onmouseover="this.style.color='var(--bordeaux3)'" onmouseout="this.style.color=''">Mentions légales</a></li>
+      <li><a href="#" style="transition:color .2s" onmouseover="this.style.color='var(--bordeaux3)'" onmouseout="this.style.color=''">Politique de confidentialité</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+/* ── Preloader ── */
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('preloader').classList.add('done'), 900);
+});
+
+/* ── Année footer ── */
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ── Scroll progress + nav shadow ── */
+const progressBar = document.getElementById('progress-bar');
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (scrolled / maxScroll * 100) + '%';
+  nav.classList.toggle('scrolled', scrolled > 20);
+}, { passive: true });
+
+/* ── Burger ── */
+const burger = document.getElementById('burger');
+const mob = document.getElementById('mobMenu');
+burger.addEventListener('click', () => {
+  const o = mob.classList.toggle('open');
+  burger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+  burger.setAttribute('aria-label', o ? 'Fermer le menu' : 'Ouvrir le menu');
+});
+mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mob.classList.remove('open');
+  burger.classList.remove('open');
+  burger.setAttribute('aria-label', 'Ouvrir le menu');
+  document.body.style.overflow = '';
+}));
+
+/* ── Fade IntersectionObserver ── */
+const io = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('in'), i * 60);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.fade').forEach(el => io.observe(el));
+
+/* ── FAVORIS ── */
+let favs = {};
+try { favs = JSON.parse(localStorage.getItem('olc_favs') || '{}'); } catch(e) {}
+
+function saveFavs() {
+  try { localStorage.setItem('olc_favs', JSON.stringify(favs)); } catch(e) {}
+}
+
+function getFavCount() { return Object.keys(favs).length }
+
+function updateFavNav() {
+  const count = getFavCount();
+  const btn = document.getElementById('fav-toggle');
+  const badge = document.getElementById('fav-count');
+  badge.textContent = count;
+  badge.classList.toggle('show', count > 0);
+  btn.classList.toggle('has-favs', count > 0);
+  btn.setAttribute('aria-label', `Ma sélection (${count} produit${count !== 1 ? 's' : ''})`);
+}
+
+function renderFavDrawer() {
+  const list = document.getElementById('fav-list');
+  const empty = document.getElementById('fav-empty');
+  const footer = document.getElementById('fav-footer');
+  const label = document.getElementById('fav-count-label');
+  const count = getFavCount();
+
+  label.textContent = count > 0 ? `(${count})` : '';
+  footer.style.display = count > 0 ? 'flex' : 'none';
+
+  list.querySelectorAll('.fav-item').forEach(el => el.remove());
+  empty.style.display = count === 0 ? 'flex' : 'none';
+
+  if (count === 0) return;
+
+  Object.values(favs).forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'fav-item';
+    div.setAttribute('data-id', item.id);
+    div.innerHTML = `
+      <img class="fav-item-img" src="${item.img}" alt="${item.name}" loading="lazy" width="56" height="72"/>
+      <div class="fav-item-info">
+        <div class="fav-item-name">${item.name}</div>
+        <div class="fav-item-ref">${item.ref}</div>
+        <div class="fav-item-price">${item.price}</div>
+      </div>
+      <button class="fav-remove" aria-label="Retirer ${item.name}" data-id="${item.id}">✕</button>
+    `;
+    list.appendChild(div);
+  });
+
+  list.querySelectorAll('.fav-remove').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.id;
+      delete favs[id];
+      saveFavs();
+      updateFavNav();
+      renderFavDrawer();
+      updateFavButtons();
+    });
+  });
+}
+
+function updateFavButtons() {
+  document.querySelectorAll('.prod-fav').forEach(btn => {
+    const id = btn.dataset.id;
+    const active = !!favs[id];
+    btn.classList.toggle('active', active);
+    const prod = btn.closest('.prod');
+    const name = prod ? prod.dataset.name : '';
+    btn.setAttribute('aria-label', `${active ? 'Retirer' : 'Ajouter'} ${name} ${active ? 'de' : 'à'} ma sélection`);
+  });
+}
+
+let toastTimer;
+function showToast(added) {
+  const toast = document.getElementById('toast');
+  toast.innerHTML = `<span class="t-heart">♥</span> ${added ? 'Ajouté à votre sélection' : 'Retiré de votre sélection'}`;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
+}
+
+document.querySelectorAll('.prod-fav').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const id = btn.dataset.id;
+    const prod = btn.closest('.prod');
+    if (!prod) return;
+    if (favs[id]) {
+      delete favs[id];
+      showToast(false);
+    } else {
+      favs[id] = {
+        id: id,
+        name: prod.dataset.name,
+        ref: prod.dataset.ref,
+        price: prod.dataset.price,
+        img: prod.dataset.img
+      };
+      showToast(true);
+    }
+    saveFavs();
+    updateFavNav();
+    updateFavButtons();
+    if (document.getElementById('fav-drawer').classList.contains('open')) {
+      renderFavDrawer();
+    }
+  });
+});
+
+const drawer = document.getElementById('fav-drawer');
+document.getElementById('fav-toggle').addEventListener('click', () => {
+  renderFavDrawer();
+  drawer.classList.add('open');
+  document.body.style.overflow = 'hidden';
+});
+document.getElementById('fav-close').addEventListener('click', () => {
+  drawer.classList.remove('open');
+  document.body.style.overflow = '';
+});
+document.getElementById('fav-overlay').addEventListener('click', () => {
+  drawer.classList.remove('open');
+  document.body.style.overflow = '';
+});
+
+document.getElementById('fav-copy-btn').addEventListener('click', () => {
+  const refs = Object.values(favs).map(f => `${f.name} — ${f.ref} — ${f.price}`).join('\n');
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(refs).then(() => {
+      const btn = document.getElementById('fav-copy-btn');
+      btn.textContent = '✓ Copié !';
+      setTimeout(() => {
+        btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copier ma sélection`;
+      }, 2000);
+    });
+  }
+});
+
+document.getElementById('fav-clear-btn').addEventListener('click', () => {
+  if (confirm('Effacer toute la sélection ?')) {
+    favs = {};
+    saveFavs();
+    updateFavNav();
+    renderFavDrawer();
+    updateFavButtons();
+  }
+});
+
+updateFavNav();
+updateFavButtons();
+
+/* ── Filtres catalogue ── */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.prod').forEach(prod => {
+      if (filter === 'all' || prod.dataset.cat === filter) {
+        prod.classList.remove('hidden');
+      } else {
+        prod.classList.add('hidden');
+      }
+    });
+  });
+});
+
+/* ── Lookbook scroll ── */
+const track = document.getElementById('lb-track');
+let isDown = false, startX, scrollLeft;
+
+track.addEventListener('mousedown', e => {
+  isDown = true; track.classList.add('active');
+  startX = e.pageX - track.offsetLeft;
+  scrollLeft = track.scrollLeft;
+});
+['mouseleave','mouseup'].forEach(ev => track.addEventListener(ev, () => { isDown = false; track.classList.remove('active'); }));
+track.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - track.offsetLeft;
+  track.scrollLeft = scrollLeft - (x - startX) * 1.2;
+});
+
+document.getElementById('lb-prev').addEventListener('click', () => {
+  track.scrollBy({ left: -310, behavior: 'smooth' });
+});
+document.getElementById('lb-next').addEventListener('click', () => {
+  track.scrollBy({ left: 310, behavior: 'smooth' });
+});
+
+/* ── Escape key ── */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    drawer.classList.remove('open');
+    mob.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-label', 'Ouvrir le menu');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+</body>
+</html>
